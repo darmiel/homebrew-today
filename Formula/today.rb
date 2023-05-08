@@ -5,15 +5,15 @@
 class Today < Formula
   desc "RALF companion for the CLI"
   homepage "https://github.com/darmiel/today"
-  version "1.3.0"
+  version "1.4.0"
 
   depends_on "git"
   depends_on "go"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/darmiel/today/releases/download/v1.3.0/today_Darwin_arm64.tar.gz"
-      sha256 "dc4507bce9e0ff6f1cc7d13542129029fce1df19af7e69654b810ce38bfbb3de"
+    if Hardware::CPU.intel?
+      url "https://github.com/darmiel/today/releases/download/v1.4.0/today_Darwin_x86_64.tar.gz"
+      sha256 "524026d16b318413bab2b1b3e57213d55067fc725355dff6f8f6f7244ccea7ca"
 
       def install
         ENV["GOPATH"] = buildpath
@@ -24,9 +24,9 @@ class Today < Formula
         end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/darmiel/today/releases/download/v1.3.0/today_Darwin_x86_64.tar.gz"
-      sha256 "0a5e417d09599e5c3c92dc4a1c6989c31132146648c3e819e188f2c0ee678a99"
+    if Hardware::CPU.arm?
+      url "https://github.com/darmiel/today/releases/download/v1.4.0/today_Darwin_arm64.tar.gz"
+      sha256 "ada9c0fde50cdda5860fc87acc5d542dede42df326cf42ded7e6e769ba2613e2"
 
       def install
         ENV["GOPATH"] = buildpath
@@ -41,8 +41,8 @@ class Today < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/darmiel/today/releases/download/v1.3.0/today_Linux_arm64.tar.gz"
-      sha256 "200af908714b2eee61679816b2243aa8bf4f618ab322baa18a7ef334ebe25bf5"
+      url "https://github.com/darmiel/today/releases/download/v1.4.0/today_Linux_arm64.tar.gz"
+      sha256 "280632648c5ec9b1668d63f219e6b9a39b7670f330334d4feee5d259b8772c1f"
 
       def install
         ENV["GOPATH"] = buildpath
@@ -54,8 +54,8 @@ class Today < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/darmiel/today/releases/download/v1.3.0/today_Linux_x86_64.tar.gz"
-      sha256 "dbcd2d12cb3acbf36e40db4f1f7a4cda4e8f33df571dae67eea8fd7c4c1e376c"
+      url "https://github.com/darmiel/today/releases/download/v1.4.0/today_Linux_x86_64.tar.gz"
+      sha256 "5b12d6d1ee25f7d77e8e04cf4b2ee03c474d187ebc11ff445eef11769c4ee0fb"
 
       def install
         ENV["GOPATH"] = buildpath
