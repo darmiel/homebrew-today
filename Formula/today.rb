@@ -5,15 +5,15 @@
 class Today < Formula
   desc "RALF companion for the CLI"
   homepage "https://github.com/darmiel/today"
-  version "1.4.0"
+  version "1.4.1"
 
   depends_on "git"
   depends_on "go"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/darmiel/today/releases/download/v1.4.0/today_Darwin_x86_64.tar.gz"
-      sha256 "524026d16b318413bab2b1b3e57213d55067fc725355dff6f8f6f7244ccea7ca"
+      url "https://github.com/darmiel/today/releases/download/v1.4.1/today_Darwin_x86_64.tar.gz"
+      sha256 "6e4810030c13a0df3494c29a16b9d24921d6b4ef14934f5980bee30de2349592"
 
       def install
         ENV["GOPATH"] = buildpath
@@ -25,8 +25,8 @@ class Today < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/darmiel/today/releases/download/v1.4.0/today_Darwin_arm64.tar.gz"
-      sha256 "ada9c0fde50cdda5860fc87acc5d542dede42df326cf42ded7e6e769ba2613e2"
+      url "https://github.com/darmiel/today/releases/download/v1.4.1/today_Darwin_arm64.tar.gz"
+      sha256 "4a598e57d676fe0f848d4cf06688d8e6e7ca996e78d2a283dc292b9268287300"
 
       def install
         ENV["GOPATH"] = buildpath
@@ -41,8 +41,8 @@ class Today < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/darmiel/today/releases/download/v1.4.0/today_Linux_arm64.tar.gz"
-      sha256 "280632648c5ec9b1668d63f219e6b9a39b7670f330334d4feee5d259b8772c1f"
+      url "https://github.com/darmiel/today/releases/download/v1.4.1/today_Linux_arm64.tar.gz"
+      sha256 "4e72327648b6a563d22afe941f838a8033f4b81f84db41b5f9979f744d726d74"
 
       def install
         ENV["GOPATH"] = buildpath
@@ -54,8 +54,8 @@ class Today < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/darmiel/today/releases/download/v1.4.0/today_Linux_x86_64.tar.gz"
-      sha256 "5b12d6d1ee25f7d77e8e04cf4b2ee03c474d187ebc11ff445eef11769c4ee0fb"
+      url "https://github.com/darmiel/today/releases/download/v1.4.1/today_Linux_x86_64.tar.gz"
+      sha256 "6c5ab37c152c7c291fd3a6530009ae7469928c3d4ed3f295e7233ba4b2089dd3"
 
       def install
         ENV["GOPATH"] = buildpath
